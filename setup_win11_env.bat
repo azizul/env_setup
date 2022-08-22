@@ -25,17 +25,22 @@ choco install vscode -y
 choco install winamp -y
 choco install winmerge -y
 choco install wireshark -y
+choco install luarocks -y
+choco install ripgrep -y
+
+# installing for latest version not in choco packages
+# TODO add manual download, unzip and system env setup
+# pwsh -c "(New-Object Net.WebClient).DownloadFile('https://luarocks.org/releases/luarocks-3.9.1-windows-64.zip', luarocks-3.9.1-windows-64.zip')"
+# pwsh -c "(New-Object Net.WebClient).DownloadFile('https://github.com/JohnnyMorganz/StyLua/releases/download/v0.14.2/stylua-win64.zip', stylua-win64.zip')"
+
 
 # node installation
 nvm install lts
 
 # pip packages
 pip install neovim
-# TODO not working in neovim
 pip install black
 
 # npm packages
 npm i -g neovim
 npm i -g prettier
-# TODO not working
-npm i -g @johnnymorganz/stylua
