@@ -28,6 +28,7 @@ choco install wireshark -y
 choco install luarocks -y
 choco install ripgrep -y
 choco install lazygit -y
+choco install rust -y
 
 # installing for latest version not in choco packages
 # TODO add manual download, unzip and system env setup
