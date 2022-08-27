@@ -10,7 +10,7 @@ Import-Module -Name Terminal-Icons
 #Import-Module oh-my-posh
 set-alias desktop "Desktop.ps1"
 
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/agnoster.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/microverse-power.omp.json" | Invoke-Expression
 
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
