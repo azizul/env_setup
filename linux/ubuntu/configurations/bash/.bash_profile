@@ -22,10 +22,15 @@ eval "$(oh-my-posh init bash --config ~/.poshthemes/microverse-power.omp.json)"
 
 # configure jdk path with latest in /opt
 export JAVA_HOME=/opt/jdk-18.0.2.1
-PATH=$PATH:$JAVA_HOME/bin
+PATH=$PATH:$JAVA_HOME/bin/
 
 export ZIZU_BIN="$HOME/bin"
 export ZIZU_PIP="$HOME/.local/bin"
 export DENO_INSTALL="/home/zizu/.deno"
-export PATH="$DENO_INSTALL/bin:$ZIZU_BIN:$ZIZU_PIP:$PATH"
+export MVN_HOME=/opt/apache-maven-3.8.6
+export PATH="$MVN_HOME/bin:$DENO_INSTALL/bin:$ZIZU_BIN:$ZIZU_PIP:$PATH"
 . "$HOME/.cargo/env"
+
+# configure keychain
+/usr/bin/keychain --nogui $HOME/.ssh/id_rsa
+source $HOME/.keychain/$HOSTNAME-sh
