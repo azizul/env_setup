@@ -126,3 +126,6 @@ export NVM_DIR="$HOME/.nvm"
 # Wasmer
 export WASMER_DIR="/home/zizu/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+# pyenv
+eval "$(pyenv virtualenv-init -)"

@@ -27,10 +27,17 @@ PATH=$PATH:$JAVA_HOME/bin/
 export ZIZU_BIN="$HOME/bin"
 export ZIZU_PIP="$HOME/.local/bin"
 export DENO_INSTALL="/home/zizu/.deno"
-export MVN_HOME=/opt/apache-maven-3.8.6
-export PATH="$MVN_HOME/bin:$DENO_INSTALL/bin:$ZIZU_BIN:$ZIZU_PIP:$PATH"
+export MVN_HOME="/opt/apache-maven-3.9.3" 
+export GO_BIN="$HOME/go/bin"
+export NIM_HOME="$HOME/.nimble/bin"
+export PATH="$NIM_HOME:$MVN_HOME/bin:$DENO_INSTALL/bin:$GO_BIN:$ZIZU_BIN:$ZIZU_PIP:$PATH"
 . "$HOME/.cargo/env"
 
 # configure keychain
 /usr/bin/keychain --nogui $HOME/.ssh/id_ed25519
 source $HOME/.keychain/$HOSTNAME-sh
+
+# configure python environment
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
